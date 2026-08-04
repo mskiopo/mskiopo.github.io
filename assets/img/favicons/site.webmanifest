@@ -1,0 +1,20 @@
+{
+  "name": "Sunny 的博客",
+  "short_name": "Sunny Blog",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#00e6ff",
+  "background_color": "#0d1220",
+  "icons": [
+    {
+      "src": "/assets/img/favicons/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/favicons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
