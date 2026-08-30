@@ -1,7 +1,7 @@
 ---
 title: 苍穹外卖C端三模块复盘
 date: 2026-08-26 21:30:00 +0800
-pinned: true
+pin: true
 categories: [技术]
 tags: [Spring Boot, Redis, Spring Cache, MyBatis, 苍穹外卖, 排错, 复盘]
 ---
