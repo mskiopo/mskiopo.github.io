@@ -1,0 +1,17 @@
+{%- comment -%}
+  Override of the theme's favicons.html: adds ?v= to icon URLs so browsers
+  treat a changed icon as a new resource (favicon caches are stubborn).
+  Bump the version below whenever you replace the icons.
+{%- endcomment -%}
+
+{%- assign favicon_v = '?v=2' -%}
+
+{% capture favicon_path %}{{ '/assets/img/favicons' | relative_url }}{% endcapture %}
+
+<link rel="icon" type="image/png" href="{{ favicon_path }}/favicon-96x96.png{{ favicon_v }}" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="{{ favicon_path }}/favicon.svg{{ favicon_v }}">
+<link rel="shortcut icon" href="{{ favicon_path }}/favicon.ico{{ favicon_v }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ favicon_path }}/apple-touch-icon.png{{ favicon_v }}">
+{% if site.pwa.enabled %}
+  <link rel="manifest" href="{{ favicon_path }}/site.webmanifest">
+{% endif %}
