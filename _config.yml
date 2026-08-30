@@ -54,15 +54,11 @@ webmaster_verifications:
 # The end of `jekyll-seo-tag` settings
 
 # Web Analytics Settings
-# ▼ 推荐 GoatCounter（免费、无 Cookie、国内可访问）：
-#   1) 到 https://www.goatcounter.com 注册（免费计划选 personal site）
-#   2) 注册时的站点代码（如 sunny.goatcounter.com 中的 sunny）填到下面 id 里
-#   3) 填完推送后，访问数据在 https://<你的代码>.goatcounter.com 查看
 analytics:
   google:
     id: # fill in your Google Analytics ID
   goatcounter:
-    id: # ← 填你的 GoatCounter 站点代码（不要带 .goatcounter.com）
+    id: # fill in your GoatCounter ID
   umami:
     id: # fill in your Umami ID
     domain: # fill in your Umami domain
@@ -119,21 +115,26 @@ actions:
     static_url: false # [ true | false ]
 
 comments:
-  # Global switch for the post-comment system.
-  provider: giscus # [disqus | utterances | giscus]
+  # Global switch for the post-comment system. Keeping it empty means disabled.
+  provider: # [disqus | utterances | giscus]
+  # The provider options are as follows:
+  disqus:
+    shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+  # utterances settings › https://utteranc.es/
+  utterances:
+    repo: # <gh-username>/<repo>
+    issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
-  # 注意：评论生效的最后一步——到 https://github.com/apps/giscus 点 Install，
-  #       授权给 mskiopo/mskiopo.github.io 仓库（Discussions 已开启）。
   giscus:
-    repo: mskiopo/mskiopo.github.io
-    repo_id: R_kgDOTtSAmw
-    category: Announcements
-    category_id: DIC_kwDOTtSAm84DEgHd
-    mapping: pathname
-    strict: 0
-    input_position: bottom
-    lang: zh-CN
-    reactions_enabled: 1
+    repo: # <gh-username>/<repo>
+    repo_id:
+    category:
+    category_id:
+    mapping: # optional, default to 'pathname'
+    strict: # optional, default to '0'
+    input_position: # optional, default to 'bottom'
+    lang: # optional, default to the value of `site.lang`
+    reactions_enabled: # optional, default to the value of `1`
 
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 # 开启后字体与 JS 库从本站加载（assets/lib 子模块），
