@@ -119,21 +119,16 @@ actions:
     static_url: false # [ true | false ]
 
 comments:
-  # Global switch for the post-comment system. Keeping it empty means disabled.
-  # ▼▼ 启用 giscus 评论：完成 https://giscus.app/zh-CN 的配置向导后，
-  #    把下面 4 个值填上，然后把 provider 改为 'giscus' 即可。
-  #    步骤：1) 仓库 Settings → General → Features 勾选 Discussions
-  #          2) 安装 giscus GitHub App: https://github.com/apps/giscus （仅授权 mskiopo.github.io）
-  #          3) 打开 https://giscus.app/zh-CN ，仓库名填 mskiopo/mskiopo.github.io，
-  #             Discussion 分类选 "Announcements"（或 General），
-  #             页面底部会生成一段 <script>，里面有 data-repo-id 和 data-category-id
-  provider: # [disqus | utterances | giscus] ← 填完 ID 后改成 giscus
+  # Global switch for the post-comment system.
+  provider: giscus # [disqus | utterances | giscus]
   # Giscus options › https://giscus.app
+  # 注意：评论生效的最后一步——到 https://github.com/apps/giscus 点 Install，
+  #       授权给 mskiopo/mskiopo.github.io 仓库（Discussions 已开启）。
   giscus:
     repo: mskiopo/mskiopo.github.io
-    repo_id: # ← 从 giscus.app 生成的代码里复制 data-repo-id
+    repo_id: R_kgDOTtSAmw
     category: Announcements
-    category_id: # ← 从 giscus.app 生成的代码里复制 data-category-id
+    category_id: DIC_kwDOTtSAm84DEgHd
     mapping: pathname
     strict: 0
     input_position: bottom

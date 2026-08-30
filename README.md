@@ -32,6 +32,7 @@ bundle exec jekyll s
 
 ## 待办
 
-- [ ] 开启 giscus 评论(见 `_config.yml` 里 comments 段的步骤说明)
+- [x] 开启 giscus 评论(只差最后一步:到 https://github.com/apps/giscus 点 Install 授权本仓库)
+- [x] 仓库描述更新
 - [ ] 接入 GoatCounter 访问统计(见 `_config.yml` 里 analytics 段)
 - [ ] Google/Bing 站长验证(填 `_config.yml` 里 `webmaster_verifications`,然后到对应平台提交 sitemap)
