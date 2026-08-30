@@ -1,39 +1,37 @@
-# Chirpy Starter
+# Sunny 的博客
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+个人博客源码,基于 [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) 主题(Jekyll),部署在 GitHub Pages。
 
-A minimal, ready-to-use template for creating a blog with the [**Chirpy**][chirpy] Jekyll theme. Get up and running in minutes with all critical files pre-configured.
+线上地址: **https://mskiopo.github.io**
 
-## Why This Starter Exists
+## 写作
 
-When installing Chirpy through [RubyGems.org][gem], Jekyll can only read a subset of theme files (`_data`, `_layouts`, `_includes`, `_sass`, `assets`) and limited `_config.yml` options from the gem. As a result, users cannot enjoy the full out-of-the-box experience that Chirpy offers.
+在 `_posts/` 下新建 `YYYY-MM-DD-slug.md`(slug 用英文,决定文章 URL),头部写好 front matter 即可:
 
-To unlock all features, the following files must be present in your Jekyll site:
-
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
+```yaml
+---
+title: 文章标题
+date: 2026-08-30 12:00:00 +0800
+categories: [技术]
+tags: [Spring Boot]
+pinned: true   # 可选,置顶到首页
+---
 ```
 
-This starter bundles those files from the latest **Chirpy** release along with a [CD][CD] workflow, so you can start writing immediately.
+推送到 `main` 分支后,GitHub Actions 会自动构建部署。
 
-## Usage
+## 本地运行
 
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
+```shell
+bundle install
+bundle exec jekyll s
+```
 
-## Contributing
+> 注意:启用自托管资源(`assets.self_host.enabled`)后,需要先初始化子模块:
+> `git submodule update --init --recursive`
 
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
+## 待办
 
-## License
-
-This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+- [ ] 开启 giscus 评论(见 `_config.yml` 里 comments 段的步骤说明)
+- [ ] 接入 GoatCounter 访问统计(见 `_config.yml` 里 analytics 段)
+- [ ] Google/Bing 站长验证(填 `_config.yml` 里 `webmaster_verifications`,然后到对应平台提交 sitemap)
